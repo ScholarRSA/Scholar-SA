@@ -1,0 +1,448 @@
+:root {
+    --primary: #6a1b9a;
+    --secondary: #26a69a;
+    --accent: #ff7043;
+    --light: #f5f5f5;
+    --dark: #333;
+    --text: #424242;
+    --background: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary);
+    transition: color 0.3s ease;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-accent {
+    background-color: var(--accent);
+}
+
+.btn-accent:hover {
+    background-color: #f4511e;
+}
+
+/* Header */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    max-height:125px ;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: var(--dark);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: var(--primary);
+    background-color: rgba(106,27,154,0.1);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, var(--primary), #9c27b0);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Grid Sections */
+.team-grid,
+.programs-grid,
+.impact-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Card */
+.card, .program-card, .impact-item, .testimonial {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Team */
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--secondary);
+}
+
+/* Program Cards */
+.program-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.program-content h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.program-stats {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    color: #7f8c8d;
+}
+
+.stat i {
+    color: #3498db;
+}
+
+/* Impact Section */
+.impact-item {
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.impact-item i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #3498db;
+    color: white;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background: white;
+    color: #3498db;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 150px;
+}
+
+/* Images */
+.success-image,
+.mission-image,
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1rem auto;
+}
+.payment-logo-img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Menu toggle button in header */
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+/* Off-canvas side navigation */
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: -300px; /* hide off screen */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    padding: 2rem 1rem;
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto; /* scroll if content is taller */
+}
+
+.side-nav.open {
+    right: 0; /* slide in */
+}
+
+/* Close button inside side nav */
+.side-nav .close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    float: right;
+    cursor: pointer;
+}
+
+/* Navigation list inside side nav */
+.side-nav ul {
+    list-style: none;
+    padding: 2rem 0 0 0;
+    margin: 0;
+    display: block;
+
+}
+
+.side-nav ul li {
+    margin: 1rem 0;
+}
+
+/* Make links block-level for full width */
+.side-nav ul li a {
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--dark);
+    transition: color 0.2s ease;
+    text-align: center;
+
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark);
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link.active {
+    background-color: #6a1b9a;
+    color: white !important;
+    border-radius: 5px;
+    cursor: default;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0 1rem;
+    text-align: center;
+}
+
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .nav ul,
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-evenly;
+        justify-content: space-between;
+    }
+
+    .menu-btn {
+        padding-bottom:10px;
+    }
+
+    .header-container h1 {
+        font-size: 32px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Orientation-specific enhancements */
+@media (orientation: portrait) {
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .success-image,
+    .mission-image {
+        max-height: 300px;
+    }
+}
+
+@media (orientation: landscape) {
+    .hero h1 {
+        font-size: 3.25rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .cta-section {
+        padding: 4rem;
+    }
+}
