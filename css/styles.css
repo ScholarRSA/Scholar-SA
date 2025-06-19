@@ -391,7 +391,7 @@ footer {
 
     .header-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         padding-right: 10px;
     }
 
