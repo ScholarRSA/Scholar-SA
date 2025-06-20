@@ -89,15 +89,10 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    padding: 1rem 2rem;
+    position: relative;
 }
 
 .logo {
@@ -105,6 +100,29 @@ header {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.logo-wrapper {
+    flex: 0 0 auto;
+}
+
+.site-title {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 3rem); /* scalable heading size */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--primary);
+}
+
+.menu-btn {
+    flex: 0 0 auto;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--dark);
+    cursor: pointer;
 }
 
 nav ul {
@@ -382,6 +400,7 @@ footer {
 
 /* Responsive Breakpoints */
 @media (max-width: 768px) {
+
     .nav ul,
     .cta-buttons {
         flex-direction: column;
@@ -390,18 +409,15 @@ footer {
     }
 
     .header-container {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 10px;
+        padding: 1rem;
     }
+
 
     .menu-btn {
         padding-bottom:10px;
     }
 
-    .header-container h1 {
-        font-size: 32px;
-    }
+
 
     .hero h1 {
         font-size: 2.25rem;
@@ -423,6 +439,11 @@ footer {
 
 /* Orientation-specific enhancements */
 @media (orientation: portrait) {
+
+    .site-title {
+        font-size: clamp(2.5rem, 4vw, 3rem);
+    }
+
     .hero {
         padding: 3rem 1.5rem;
     }
@@ -434,6 +455,11 @@ footer {
 }
 
 @media (orientation: landscape) {
+
+    .site-title {
+        font-size: clamp(3rem, 4vw, 3rem);
+    }
+
     .hero h1 {
         font-size: 3.25rem;
     }
